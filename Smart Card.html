@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LPU Smart Card — Offers</title>
+
+  <!--
+    IMPORTANT:
+    Put this index.html in the same folder as the image files below (exact filenames).
+    Filenames used (URL-encoded where needed):
+      - WhatsApp%20Image%202025-09-03%20at%2015.38.37_abf92bc5.jpg   (Krishna — not shown here but okay if present)
+      - WhatsApp%20Image%202025-09-03%20at%2015.38.36_e417382a.jpg   (Yummy) 
+      - WhatsApp_Image_2025-09-04_at_15.08.40_493b124e-removebg-preview.png  (Taco Town)
+      - image-removebg-preview%20(6).png   (Snack Bar)
+      - WhatsApp_Image_2025-09-04_at_15.08.40_57164e23-removebg-preview.png (Ahuja)
+      - WhatsApp_Image_2025-09-04_at_15.08.41_baccf4e3.jpg (Symposium)
+      - WhatsApp%20Image%202025-09-03%20at%2015.37.16_608ec39b.jpg (Bokki Tokki)
+      - WhatsApp%20Image%202025-09-04%20at%2016.41.38_597f613e.jpg (Chinese Cafe)
+    (This file uses the filenames we discussed — ensure those exact files exist in the folder.)
+  -->
+
+  <style>
+    :root{
+      --blue: #77BEF0;
+      --yellow: #FFCB61;
+      --orange: #FF894F;
+      --pink: #EA5B6F;
+      --cream: #F6EFD2;
+      --text:#222;
+      --muted:#555;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, Arial, sans-serif;
+      color:var(--text);
+      background: linear-gradient(135deg, rgba(119,190,240,0.12), rgba(255,203,97,0.08));
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    header{
+      background: linear-gradient(90deg,var(--pink),var(--orange));
+      color:#fff;
+      text-align:center;
+      padding:22px 12px;
+      font-size:1.6rem;
+      font-weight:700;
+      letter-spacing:0.6px;
+      box-shadow: 0 6px 18px rgba(234,91,111,0.15);
+    }
+
+    .wrap{
+      width:min(1200px,94%);
+      margin:22px auto;
+    }
+
+    .grid{
+      display:grid;
+      gap:20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .card{
+      display:flex;
+      gap:16px;
+      align-items:center;
+      background: var(--cream);
+      border-radius:16px;
+      padding:14px;
+      border:5px solid transparent; /* color set per card via nth-child */
+      box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .card:hover{
+      transform: translateY(-6px);
+      box-shadow: 0 18px 36px rgba(0,0,0,0.14);
+    }
+
+    /* border colors (cycle the palette) */
+    .grid > .card:nth-child(1){ border-color: var(--blue); }
+    .grid > .card:nth-child(2){ border-color: var(--yellow); }
+    .grid > .card:nth-child(3){ border-color: var(--orange); }
+    .grid > .card:nth-child(4){ border-color: var(--pink); }
+    .grid > .card:nth-child(5){ border-color: var(--blue); }
+    .grid > .card:nth-child(6){ border-color: var(--yellow); }
+
+    /* image */
+    .photo{
+      width:120px;
+      height:120px;
+      flex:0 0 120px;
+      border-radius:12px;
+      object-fit:cover;
+      background:#e9e9e9;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08) inset;
+    }
+
+    .card-body{ flex:1; min-width:0; }
+    .title{
+      margin:0 0 6px 0;
+      font-size:1.08rem;
+      color:var(--pink);
+      font-weight:700;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+    }
+    .meta{
+      margin:0;
+      color:var(--muted);
+      font-size:0.95rem;
+      line-height:1.3;
+    }
+
+    .offer{
+      display:inline-block;
+      margin-top:8px;
+      padding:6px 10px;
+      border-radius:12px;
+      font-weight:700;
+      font-size:0.92rem;
+      color:#111;
+      background: linear-gradient(90deg,var(--yellow), #ffe08a);
+      box-shadow: 0 6px 10px rgba(0,0,0,0.06);
+    }
+
+    /* small screens: stack card items */
+    @media (max-width:460px){
+      .card{ flex-direction:column; align-items:stretch; padding:12px; }
+      .photo{ width:100%; height:170px; flex:unset; border-radius:10px; }
+      .title{ white-space:normal; }
+    }
+  </style>
+</head>
+<body>
+  <header>LPU Smart Card — Campus Offers</header>
+
+  <main class="wrap">
+    <section class="grid">
+
+      <!-- 1) Taco Town -->
+      <article class="card">
+        <img class="photo"
+             src="WhatsApp_Image_2025-09-04_at_15.08.40_493b124e-removebg-preview.png"
+             alt="Taco Town" />
+        <div class="card-body">
+          <h4 class="title">Taco Town</h4>
+          <p class="meta"><strong>Location:</strong> UniMall / Food Court</p>
+          <div class="offer">10% off on a minimum bill of ₹199</div>
+        </div>
+      </article>
+
+      <!-- 2) Snack Bar -->
+      <article class="card">
+        <img class="photo"
+             src="image-removebg-preview%20(6).png"
+             alt="Snack Bar" />
+        <div class="card-body">
+          <h4 class="title">Snack Bar</h4>
+          <p class="meta"><strong>Location:</strong> Front Food Court near UniHospital</p>
+          <div class="offer">10% off on a minimum bill of ₹199</div>
+        </div>
+      </article>
+
+      <!-- 3) Ahuja Shake's Refreshment -->
+      <article class="card">
+        <img class="photo"
+             src="WhatsApp_Image_2025-09-04_at_15.08.40_57164e23-removebg-preview.png"
+             alt="Ahuja Shake's Refreshment" />
+        <div class="card-body">
+          <h4 class="title">Ahuja Shake's Refreshment</h4>
+          <p class="meta"><strong>Location:</strong> UniMall</p>
+          <div class="offer">10% off on a minimum bill of ₹199</div>
+        </div>
+      </article>
+
+      <!-- 4) Symposium -->
+      <article class="card">
+        <img class="photo"
+             src="WhatsApp Image 2025-09-04 at 15.08.41_baccf4e3.jpg"
+             alt="Symposium" />
+        <div class="card-body">
+          <h4 class="title">Symposium</h4>
+          <p class="meta"><strong>Location:</strong> UniMall / Food Court</p>
+          <div class="offer">10% off on a minimum bill of ₹199</div>
+        </div>
+      </article>
+
+      <!-- 5) Bokki Tokki -->
+      <article class="card">
+        <img class="photo"
+             src="WhatsApp%20Image%202025-09-03%20at%2015.37.16_608ec39b.jpg"
+             alt="Bokki Tokki" />
+        <div class="card-body">
+          <h4 class="title">Bokki Tokki</h4>
+          <p class="meta"><strong>Location:</strong> Front Food Court near UniHospital</p>
+          <div class="offer">10% off on a minimum bill of ₹199</div>
+        </div>
+      </article>
+
+      <!-- 6) Chinese Cafe -->
+      <article class="card">
+        <img class="photo"
+             src="WhatsApp%20Image%202025-09-04%20at%2016.41.38_597f613e.jpg"
+             alt="Chinese Cafe" />
+        <div class="card-body">
+          <h4 class="title">Chinese Cafe</h4>
+          <p class="meta"><strong>Location:</strong> Food Court near WH Smith</p>
+          <div class="offer">10% off on a minimum bill of ₹199</div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+</body>
+</html>
